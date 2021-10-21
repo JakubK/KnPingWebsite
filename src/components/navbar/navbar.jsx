@@ -1,12 +1,15 @@
 import { useState } from "react";
 import "./navbar.css";
 
-const Navbar = () => {
+const Navbar = props => {
   const [isToggled, setToggled] = useState(false);
   const toggle = () => {
     setToggled(!isToggled);
     console.log(isToggled);
   }
+  const path = props.path();
+  const isLogoVisible = (path !== "/");
+
   return (
     <nav className={"navbar " + (isToggled ? 'navbar--active' : '')}>
       <div className="navbar__wrapper">
@@ -16,7 +19,7 @@ const Navbar = () => {
           <span></span>
         </div>
         <svg
-          className="navbar__logo"
+          className={"navbar__logo " + (isLogoVisible ? "" : 'navbar__logo--hidden')}
           width="99"
           height="28"
           viewBox="0 0 99 28"
