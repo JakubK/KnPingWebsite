@@ -49,12 +49,21 @@
     top: 0;
     z-index: 1;
     width: 100%;
-    height: 100%;
+    padding-top: 11px;
   }
 
   .navbar .navbar__nav {
     flex-direction: column;
     align-items: center;
+    margin-block-start: 0;
+    transition: all 0.5s;
+    overflow: hidden;
+    height: auto;
+    max-height: 0;
+  }
+
+  .navbar.navbar--active .navbar__nav {
+    max-height: 300px;
   }
 
   .navbar .navbar__nav li {
@@ -76,7 +85,39 @@
 
 .burger span {
   display: block;
+  position: relative;
   width: 100%;
   height: 2px;
   background: white;
+  transition: all 0.5s;
+  transform-origin: center;
 }
+
+.burger span:nth-child(1) {
+  top: 0;
+}
+
+.burger span:nth-child(2) {
+  opacity: 1;
+}
+
+.burger span:nth-child(3) {
+  bottom: 0;
+}
+
+.burger.burger--active span:nth-child(1) {
+  position: relative;
+  top: 50%;
+  transform: translateY(-50%) rotate(45deg);
+}
+
+.burger.burger--active span:nth-child(2) {
+  opacity: 0;
+}
+
+.burger.burger--active span:nth-child(3) {
+  position: relative;
+  bottom: 50%;
+  transform: translateY(50%) rotate(-45deg);
+}
+

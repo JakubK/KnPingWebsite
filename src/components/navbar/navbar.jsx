@@ -1,10 +1,16 @@
+import { useState } from "react";
 import "./navbar.css";
 
-const navbar = () => {
+const Navbar = () => {
+  const [isToggled, setToggled] = useState(false);
+  const toggle = () => {
+    setToggled(!isToggled);
+    console.log(isToggled);
+  }
   return (
-    <nav className="navbar">
+    <nav className={"navbar " + (isToggled ? 'navbar--active' : '')}>
       <div className="navbar__wrapper">
-        <div className="navbar__burger burger">
+        <div onClick={toggle} className={"burger navbar__burger " + (isToggled ? 'burger--active' : '')}>
           <span></span>
           <span></span>
           <span></span>
@@ -16,7 +22,7 @@ const navbar = () => {
           viewBox="0 0 99 28"
           fill="none"
           xmlns="http://www.w3.org/2000/svg">
-          <g clip-path="url(#clip0_2:88)">
+          <g clipPath="url(#clip0_2:88)">
             <path
               d="M13.896 0.479706C19.9998 0.479706 22.6095 4.24685 22.6095 8.57194C22.6095 12.6572 20.2402 17.0648 13.896 17.0648H5.46169C5.02041 17.0648 4.77995 17.2651 4.77995 17.7448V27.5203H0.0396461V16.8258C0.0396461 13.7825 1.3247 12.5403 4.29644 12.5403H14.0554C16.7453 12.5403 17.8296 10.6954 17.8296 8.81179C17.8296 6.84999 16.6669 5.21142 14.0968 5.21142H0V0.483145L13.896 0.479706Z"
               fill="white"
@@ -56,4 +62,4 @@ const navbar = () => {
   );
 };
 
-export default navbar;
+export default Navbar;

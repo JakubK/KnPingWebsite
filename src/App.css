@@ -7,3 +7,9 @@ body {
   margin-left: 80px;
   margin-right: 80px;
 }
+
+@media screen and (max-width: 769px) {
+  body {
+    padding-top: 80px;
+  }
+}
