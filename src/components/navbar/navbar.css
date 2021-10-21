@@ -55,7 +55,7 @@
   .navbar .navbar__nav {
     flex-direction: column;
     align-items: center;
-    margin-block-start: 0;
+    margin-block-start: 16px;
     transition: all 0.5s;
     overflow: hidden;
     height: auto;
