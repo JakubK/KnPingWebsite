@@ -8,6 +8,7 @@
 }
 
 .navbar .navbar__burger {
+  cursor: pointer;
   display: none;
   color: white;
   position: absolute;
@@ -21,6 +22,9 @@
   margin-left: auto;
   margin-right: auto;
 }
+.navbar .navbar__logo--hidden {
+  display: none;
+}
 
 .navbar .navbar__nav {
   list-style-type: none;
@@ -30,13 +34,17 @@
   font-size: 12px;
   font-family: space;
   font-family: 'Space Mono', monospace;
-  color: white;
 
   display: flex;
   justify-content: space-between;
 }
 
-.navbar .navbar__nav li:hover{
+.navbar .navbar__nav a {
+  text-decoration: none;
+  color: white;
+}
+
+.navbar .navbar__nav li:hover a{
   color: #0CC6FF;
   cursor: pointer;
 }
@@ -60,6 +68,10 @@
     overflow: hidden;
     height: auto;
     max-height: 0;
+  }
+
+  .navbar .navbar__wrapper.navbar__wrapper--moved {
+    margin-top: 28px;
   }
 
   .navbar.navbar--active .navbar__nav {

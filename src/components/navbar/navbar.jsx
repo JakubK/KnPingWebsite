@@ -1,22 +1,25 @@
 import { useState } from "react";
+import { Link } from "react-router-dom";
 import "./navbar.css";
 
-const Navbar = () => {
+const Navbar = props => {
   const [isToggled, setToggled] = useState(false);
   const toggle = () => {
     setToggled(!isToggled);
-    console.log(isToggled);
   }
+  const path = props.path();
+  const isLogoVisible = (path !== "/");
+
   return (
     <nav className={"navbar " + (isToggled ? 'navbar--active' : '')}>
-      <div className="navbar__wrapper">
+      <div className={"navbar__wrapper " + (isLogoVisible ? '' : 'navbar__wrapper--moved')}>
         <div onClick={toggle} className={"burger navbar__burger " + (isToggled ? 'burger--active' : '')}>
           <span></span>
           <span></span>
           <span></span>
         </div>
         <svg
-          className="navbar__logo"
+          className={"navbar__logo " + (isLogoVisible ? "" : 'navbar__logo--hidden')}
           width="99"
           height="28"
           viewBox="0 0 99 28"
@@ -52,11 +55,21 @@ const Navbar = () => {
         </svg>
       </div>
 			<ul className="navbar__nav">
-				<li>strona główna</li>
-				<li>zarząd</li>
-				<li>galeria</li>
-				<li>sekcja ctf</li>
-				<li>kontakt</li>
+        <li>
+          <Link to="/">strona główna</Link>
+        </li>
+        <li>
+          <Link to="/management">zarząd</Link>
+        </li>
+        <li>
+          <Link to="/gallery">galeria</Link>
+        </li>
+        <li>
+          <Link to="/ctf">sekcja ctf</Link>
+        </li>
+        <li>
+          <Link to="/contact">kontakt</Link>
+        </li>
 			</ul>
     </nav>
   );
