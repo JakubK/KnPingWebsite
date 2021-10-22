@@ -9,8 +9,10 @@ import './App.css';
 
 import Navbar from './components/navbar/navbar';
 import Footer from './components/footer/footer';
-
-
+import Main from "./views/main";
+import Management from "./views/management/management";
+import Gallery from "./views/gallery/gallery";
+import Contact from "./views/contact/contact";
 
 function App() {
     function GetPath() {
@@ -21,10 +23,22 @@ function App() {
     return (
         <Router>
             <div className="app">
+                <Navbar path={GetPath} />
                 <Switch>
-                    <Route path="/">
-                        <Navbar path={GetPath} />
-                        <Footer />
+                    <Route exact path="/">
+                        <Main/>
+                    </Route>
+                    <Route path="/management">
+                        <Management/>
+                        <Footer/>
+                    </Route>
+                    <Route path="/gallery">
+                        <Gallery/>
+                        <Footer/>
+                    </Route>
+                    <Route path="/contact">
+                        <Contact/>
+                        <Footer/>
                     </Route>
                 </Switch>
             </div>
