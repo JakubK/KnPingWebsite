@@ -13,6 +13,7 @@ import Main from "./views/main";
 import Management from "./views/management/management";
 import Gallery from "./views/gallery/gallery";
 import Contact from "./views/contact/contact";
+import Content from "./components/content/content"
 
 function App() {
     function GetPath() {
@@ -24,22 +25,9 @@ function App() {
         <Router>
             <div className="app">
                 <Navbar path={GetPath} />
+                <Content path={GetPath} />
                 <Switch>
-                    <Route exact path="/">
-                        <Main/>
-                    </Route>
-                    <Route path="/management">
-                        <Management/>
-                        <Footer/>
-                    </Route>
-                    <Route path="/gallery">
-                        <Gallery/>
-                        <Footer/>
-                    </Route>
-                    <Route path="/contact">
-                        <Contact/>
-                        <Footer/>
-                    </Route>
+
                 </Switch>
             </div>
         </Router>
