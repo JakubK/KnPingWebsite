@@ -1,0 +1,16 @@
+.contact {
+  color: white;
+  font-family: 'Space Mono', monospace;
+}
+
+.contact h1 {
+  font-size: 94px;
+}
+
+.contact h3 {
+  font-size: 36px;
+}
+
+.contact .contact__separator {
+  border-color: #0CC6FF;
+}
