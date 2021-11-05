@@ -1,0 +1,23 @@
+.gallery-image {
+  position: relative;
+}
+
+.gallery-image img {
+  width: 100%;
+  height: auto;
+}
+
+.gallery-image .gallery-image__label {
+  opacity: 0;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  background: #0CC6FF;
+  padding: 16px;
+  color: white;
+  font-family: 'Space Mono', monospace;
+}
+
+.gallery-image:hover .gallery-image__label {
+  opacity: 1;
+}
