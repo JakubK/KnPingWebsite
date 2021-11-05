@@ -12,6 +12,26 @@
 .gallery .gallery__grid {
   display: grid;
   grid-template-columns: repeat(2, auto);
-  grid-template-rows: 1fr;
   gap: 2rem
+}
+
+.gallery .gallery__left {
+  display: flex;
+  flex-direction: column;
+}
+
+.gallery .gallery__right {
+  display: flex;
+  flex-direction: column;
+}
+
+@media screen and (max-width: 769px) {
+  .gallery h1 {
+    font-size: 10vw;
+  }
+
+  .gallery .gallery__grid {
+    gap: 0;
+    grid-template-columns: 1fr;
+  }
 }

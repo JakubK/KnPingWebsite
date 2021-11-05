@@ -15,12 +15,16 @@ const Gallery = () => {
       <h1>Galeria. Tu zobaczysz jak działamy</h1>
     </div>
     <div className="gallery__grid">
-      <GalleryImage imgUrl={g1} content="xd" />
-      <GalleryImage imgUrl={g2} content="xd" />
-      <GalleryImage imgUrl={g3} content="xd" />
-      <GalleryImage imgUrl={g4} content="xd" />
-      <GalleryImage imgUrl={g5} content="xd" />
-      <GalleryImage imgUrl={g6} content="xd" />
+      <div className="gallery__left">
+        <GalleryImage imgUrl={g1} content="Warsztaty o cyberbezpieczeństwie" />
+        <GalleryImage imgUrl={g2} content="xd" />
+        <GalleryImage imgUrl={g3} content="xd" />
+      </div>
+      <div className="gallery__right">
+        <GalleryImage imgUrl={g4} content="xd" />
+        <GalleryImage imgUrl={g5} content="xd" />
+        <GalleryImage imgUrl={g6} content="xd" />
+      </div>
     </div>
   </div> 
 }
