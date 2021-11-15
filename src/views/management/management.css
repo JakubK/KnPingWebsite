@@ -47,6 +47,22 @@
     float: left;
 }
 
+.management__symbol-container {
+    padding-right: 18px;
+    float: left;
+}
+
+@media (min-width: 1600px) {
+    .management__section-right {
+        width: 700px;
+    }
+
+    .management__section-left {
+        width: calc(100% - 700px);
+        float: left;
+    }
+}
+
 @media (max-width: 1024px) {
     .management h1 {
         font-size: 64px;
