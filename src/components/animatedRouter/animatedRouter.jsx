@@ -10,6 +10,12 @@ const Wrapper = styled.div`
   margin-right: -80px;
   margin-left: -80px;
   overflow: hidden;
+
+  @media (max-width: 769px) {
+    margin-right: -16px;
+    margin-left: -16px;
+    width: calc(100% + 32px);
+  }
 `
 
 const ViewContainer = styled.div`
@@ -17,6 +23,11 @@ const ViewContainer = styled.div`
   height: 100%;
   padding-left: 80px;
   padding-right: 80px;
+  overflow: hidden;
+  @media (max-width: 769px) {
+    padding-left: 16px;
+    padding-right: 16px;
+  }
   transition: transform 1.25s, opacity 0.9s;
   float: left;
 
