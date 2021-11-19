@@ -7,6 +7,15 @@
 .management {
     color: white;
     font-family: 'Space Mono', monospace;
+    max-width: 1600px;
+}
+
+@media (min-width: 1600px) {
+    .management {
+        width: 1600px;
+        margin-left: 50%;
+        transform: translateX(-50%);
+    }
 }
 
 .management h1 {
