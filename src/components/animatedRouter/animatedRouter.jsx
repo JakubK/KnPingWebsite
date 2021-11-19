@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import Main from "../../views/main";
+import Main from "../../views/main/main";
 import Gallery from "../../views/gallery/gallery";
 import Management from "../../views/management/management";
 import Contact from "../../views/contact/contact";
@@ -10,8 +10,6 @@ const Wrapper = styled.div`
   margin-right: -80px;
   margin-left: -80px;
   overflow: hidden;
-  
-
 `
 
 const ViewContainer = styled.div`
