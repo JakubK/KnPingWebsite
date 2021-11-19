@@ -1,0 +1,85 @@
+.clearfix, .clearfix::after, .clearfix::before {
+    display: table;
+    clear: both;
+    content: '';
+}
+
+.management {
+    color: white;
+    font-family: 'Space Mono', monospace;
+}
+
+.management h1 {
+    font-size: 94px;
+    margin-block-start: 0;
+    margin-block-end: 0;
+}
+
+.management h3 {
+    font-size: 36px;
+    margin-block-start: 0;
+    margin-block-end: 0;
+}
+
+.management__section {
+    width: 100%;
+    float: left;
+}
+
+.management__section-left {
+    width: calc(100% - 400px);
+    float: left;
+}
+
+.management__section-left h1 {
+    overflow-wrap: anywhere;
+}
+
+.management__section-left img {
+    max-width: calc(100% - 16px);
+    margin: 16px 8px;
+}
+
+.management__section-right {
+    width: 400px;
+    padding: 10px 40px;
+    padding-left: 80px;
+    float: left;
+}
+
+.management__symbol-container {
+    padding-right: 18px;
+    float: left;
+}
+
+@media (min-width: 1600px) {
+    .management__section-right {
+        width: 700px;
+    }
+
+    .management__section-left {
+        width: calc(100% - 700px);
+        float: left;
+    }
+}
+
+@media (max-width: 1024px) {
+    .management h1 {
+        font-size: 64px;
+    }
+}
+
+@media (max-width: 768px) {
+    .management h1 {
+        font-size: 64px;
+    }
+
+    .management__section-left {
+        width: 100%;
+    }
+
+    .management__section-right {
+        width: 100%;
+        padding: 20px 0;
+    }
+}
