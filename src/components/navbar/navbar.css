@@ -65,6 +65,10 @@
     padding-top: 11px;
   }
 
+  .navbar .navbar__logo {
+    margin-top: 10px;
+  }
+
   .navbar .navbar__nav {
     flex-direction: column;
     align-items: center;
