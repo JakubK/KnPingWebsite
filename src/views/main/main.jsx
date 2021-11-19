@@ -74,11 +74,11 @@ class Main extends Component {
     this.setState({allLettersLength: allLettersLength});
     console.log(allLettersLength)
 
-    const interval = setInterval(() => {
+    const textInterval = setInterval(() => {
       this.setState({letterIterator: this.state.letterIterator + 1});
 
       if (this.state.letterIterator + 1 >= this.state.allLettersLength) {
-        clearInterval(interval);
+        clearInterval(textInterval);
         setTimeout(() => {
           // to hide text
           this.setState({isAnimationDone: true});
@@ -91,8 +91,11 @@ class Main extends Component {
       }
     }, 150);
 
-    setInterval(() => {
+    const pointerInterval = setInterval(() => {
       this.setState({pointerIteration: this.state.pointerIteration + 1});
+      if (this.state.isAnimationDone) {
+        clearInterval(pointerInterval);
+      }
     }, 300);
   }
 
