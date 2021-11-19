@@ -7,6 +7,7 @@ import './App.css';
 
 import Navbar from './components/navbar/navbar';
 import AnimatedRouter from "./components/animatedRouter/animatedRouter";
+import Footer from "./components/footer/footer";
 
 function App() {
     function GetPath() {
@@ -19,6 +20,7 @@ function App() {
             <div className="app">
                 <Navbar path={GetPath} />
                 <AnimatedRouter path={GetPath} />
+                <Footer path={GetPath} />
             </div>
         </Router>
     );
