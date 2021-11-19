@@ -4,8 +4,6 @@
 
 body {
   background: black;
-  margin-left: 80px;
-  margin-right: 80px;
 }
 
 @media screen and (max-width: 769px) {

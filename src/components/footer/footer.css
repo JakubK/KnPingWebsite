@@ -4,6 +4,8 @@
   position: relative;
   display: flex;
   justify-content: space-between;
+  margin-left: 80px;
+  margin-right: 80px;
 }
 
 .footer .footer__caption {
