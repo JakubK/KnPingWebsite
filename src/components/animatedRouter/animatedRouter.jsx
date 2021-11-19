@@ -6,8 +6,11 @@ import Contact from "../../views/contact/contact";
 
 const Wrapper = styled.div`
   position: relative;
-  width: 100%;
+  width: calc(100% + 160px);
+  margin-right: -80px;
+  margin-left: -80px;
   overflow: hidden;
+  
 
 `
 
