@@ -8,11 +8,14 @@ const Wrapper = styled.div`
   position: relative;
   width: 100%;
   overflow: hidden;
+
 `
 
 const ViewContainer = styled.div`
   width: 100%;
   height: 100%;
+  padding-left: 80px;
+  padding-right: 80px;
   transition: transform 1.25s, opacity 0.9s;
   float: left;
 
@@ -48,7 +51,7 @@ const AnimatedRouter = props => {
         <Wrapper>
             {
                 pages.map(page =>
-                    <ViewContainer animation="fade" position={(pages.indexOf(page) - currentPageIndex)}>
+                    <ViewContainer animation="slide" position={(pages.indexOf(page) - currentPageIndex)}>
                         {page}
                     </ViewContainer>
                 )

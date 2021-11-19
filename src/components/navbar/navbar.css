@@ -1,6 +1,8 @@
 .navbar {
   padding-top: 34px;
   background: black;
+  margin-left: 80px;
+  margin-right: 80px;
 }
 
 .navbar .navbar__wrapper {
