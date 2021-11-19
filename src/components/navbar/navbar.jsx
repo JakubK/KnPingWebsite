@@ -54,23 +54,23 @@ const Navbar = props => {
           </defs>
         </svg>
       </div>
-			<ul className="navbar__nav">
-        <li>
+      <ul className="navbar__nav">
+        <li onClick={() => toggle()}>
           <Link to="/">strona główna</Link>
         </li>
-        <li>
+        <li onClick={() => toggle()}>
           <Link to="/management">zarząd</Link>
         </li>
-        <li>
+        <li onClick={() => toggle()}>
           <Link to="/gallery">galeria</Link>
         </li>
-        <li>
+        <li onClick={() => toggle()}>
           <Link to="/ctf">sekcja ctf</Link>
         </li>
-        <li>
+        <li onClick={() => toggle()}>
           <Link to="/contact">kontakt</Link>
         </li>
-			</ul>
+      </ul>
     </nav>
   );
 };
