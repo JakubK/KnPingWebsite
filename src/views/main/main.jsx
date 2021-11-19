@@ -1,10 +1,17 @@
-import {Component, useEffect, useState} from "react";
+import { Component } from "react";
 import styled from 'styled-components';
 
 const Container = styled.div`
   width: 100%;
-  height: calc(100vh - 200px);
+  margin-top: -80px;
+  height: calc(100vh - 52px - 18px);
   position: relative;
+
+  @media (max-width: 769px) {
+    padding-top: 67px;
+    height: calc(100vh);
+    overflow: hidden;
+  }
 `;
 
 const TextAnimation = styled.div`
@@ -13,15 +20,24 @@ const TextAnimation = styled.div`
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  height: 200px;
+
+  width: 100vw;
+  word-break: break-all;
+  
   text-align: center;
   color: white;
   font-size: 182px;
-  transition: opacity 0.95s;
 
-  color: rgba(255, 255, 255, ${props => props.randomOpacity});
+  transition: opacity 0.95s;
   
   ${props => props.isVisible ? "" : `opacity: 0;`};
+
+  @media (max-width: 1024px) {
+    font-size: 150px;
+  }
+  @media (max-width: 769px) {
+    font-size: 62px;
+  }
 `;
 
 const TextPointer = styled.span`
@@ -37,7 +53,7 @@ const Logo = styled.div`
   transform: translate(-50%, -50%);
   width: 90%;
   max-width: 1200px;
-  transition: opacity 0.95s;
+  transition: opacity 2.95s;
   opacity: 0;
   ${props => props.isVisible ? "opacity: 1;" : `opacity: 0;`};
 `;
@@ -45,7 +61,11 @@ const Logo = styled.div`
 class Main extends Component {
   constructor() {
     super();
-    this.state = {letterIterator: 0, pointerIteration: 0, words: ["KOŁO ", "NAUKOWE ", "POLITECHNIKI ", "GDAŃSKIEJ "], isAnimationDone: false};
+    let words = ["KOŁO ", "NAUKOWE ", "POLITECHNIKI ", "GDAŃSKIEJ "];
+    if (window.innerWidth < 769) {
+      words = ["KOŁO ", "NAUKOWE "];
+    }
+    this.state = {letterIterator: 0, pointerIteration: 0, words: words, isAnimationDone: false, isLogoVisible: false};
   }
 
   componentDidMount() {
@@ -60,8 +80,14 @@ class Main extends Component {
       if (this.state.letterIterator + 1 >= this.state.allLettersLength) {
         clearInterval(interval);
         setTimeout(() => {
+          // to hide text
           this.setState({isAnimationDone: true});
-        }, 375)
+
+          setTimeout(() => {
+            // to show logo
+            this.setState({isLogoVisible: true});
+          }, 500)
+        }, 275)
       }
     }, 150);
 
@@ -80,7 +106,9 @@ class Main extends Component {
 
     return this.state.words[i].substring(0, this.state.letterIterator - (counter - this.state.words[i].length));
   }
+
   getLetterIndex() {
+    // returns the letter's index in its word
     let i;
     let counter = 0;
     for (i = 0; i < this.state.words.length; i++) {
@@ -88,27 +116,17 @@ class Main extends Component {
       if (counter > this.state.letterIterator) break;
     }
     let result = this.state.letterIterator - (counter - this.state.words[i].length);
-    console.log(result)
-    return result;
-  }
-
-  getRandomOpacity() {
-    let max = 1;
-    let min = 0.5;
-    let result = Math.random() * (max - min) + min;
-    console.log(result)
     return result;
   }
 
   render() {
-    let wordIterator = 0;
     return(
         <Container>
           <TextAnimation isVisible={!this.state.isAnimationDone}>
             {this.getWord()}
             <TextPointer opacity={this.state.pointerIteration % 2}>|</TextPointer>
           </TextAnimation>
-          <Logo isVisible={this.state.isAnimationDone}>
+          <Logo isVisible={this.state.isLogoVisible}>
             <svg
                 viewBox="0 0 99 28"
                 fill="none"
