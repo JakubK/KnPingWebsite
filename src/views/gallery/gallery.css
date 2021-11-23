@@ -27,11 +27,12 @@
 
 @media screen and (max-width: 769px) {
   .gallery h1 {
-    font-size: 10vw;
+    font-size: 6vw;
   }
 
   .gallery .gallery__grid {
     gap: 0;
     grid-template-columns: 1fr;
+    margin: 14px;
   }
 }

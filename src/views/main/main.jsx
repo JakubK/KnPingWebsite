@@ -1,4 +1,4 @@
-import { Component } from "react";
+import {Component} from "react";
 import styled from 'styled-components';
 
 const Container = styled.div`
@@ -20,23 +20,19 @@ const TextAnimation = styled.div`
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-
-  width: 100vw;
-  word-break: break-all;
-  
+  width: 80vw;
+  max-width: 1000px;
+  word-break: break-word;
   text-align: center;
   color: white;
-  font-size: 182px;
-
+  font-size: 80px;
   transition: opacity 0.95s;
-  
   ${props => props.isVisible ? "" : `opacity: 0;`};
-
   @media (max-width: 1024px) {
-    font-size: 150px;
+    font-size: 70px;
   }
   @media (max-width: 769px) {
-    font-size: 62px;
+    font-size: 32px;
   }
 `;
 
@@ -52,7 +48,7 @@ const Logo = styled.div`
   left: 50%;
   transform: translate(-50%, -50%);
   width: 90%;
-  max-width: 1200px;
+  max-width: 800px;
   transition: opacity 2.95s;
   opacity: 0;
   ${props => props.isVisible ? "opacity: 1;" : `opacity: 0;`};
@@ -61,9 +57,9 @@ const Logo = styled.div`
 class Main extends Component {
   constructor() {
     super();
-    let words = ["KOŁO ", "NAUKOWE ", "POLITECHNIKI ", "GDAŃSKIEJ "];
+    let words = ["KOŁO NAUKOWE POLITECHNIKI GDAŃSKIEJ "];
     if (window.innerWidth < 769) {
-      words = ["KOŁO ", "NAUKOWE "];
+      words = ["KOŁO ", "NAUKOWE ", "POLITECHNIKI ", "GDAŃSKIEJ "];
     }
     this.state = {letterIterator: 0, pointerIteration: 0, words: words, isAnimationDone: false, isLogoVisible: false};
   }
@@ -118,8 +114,7 @@ class Main extends Component {
       counter += this.state.words[i].length;
       if (counter > this.state.letterIterator) break;
     }
-    let result = this.state.letterIterator - (counter - this.state.words[i].length);
-    return result;
+    return this.state.letterIterator - (counter - this.state.words[i].length);
   }
 
   render() {

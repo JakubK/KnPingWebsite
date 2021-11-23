@@ -36,7 +36,7 @@
     float: left;
 }
 .management__section:first-of-type {
-    margin-top: 0px;
+    margin-top: 0;
 }
 
 .management__section-left {
@@ -84,7 +84,7 @@
 
 @media (max-width: 768px) {
     .management h1 {
-        font-size: 64px;
+        font-size: 30px;
     }
 
     .management__section-left {

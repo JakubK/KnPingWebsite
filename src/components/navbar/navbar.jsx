@@ -65,7 +65,7 @@ const Navbar = props => {
           <Link to="/gallery">galeria</Link>
         </li>
         <li onClick={() => toggle()}>
-          <Link to="/ctf">sekcja ctf</Link>
+          <Link to="/ctf">ctf</Link>
         </li>
         <li onClick={() => toggle()}>
           <Link to="/contact">kontakt</Link>
