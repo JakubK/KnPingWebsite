@@ -83,7 +83,7 @@ class Main extends Component {
           }, 500)
         }, 275)
       }
-    }, 150);
+    }, 125);
 
     const pointerInterval = setInterval(() => {
       this.setState({pointerIteration: this.state.pointerIteration + 1});
