@@ -42,11 +42,11 @@
 
 @media screen and (max-width: 768px) {
   .contact h1 {
-    font-size: 24vw;
+    font-size: 10vw;
   }
 
   .contact h3 {
-    font-size: 6vw;
+    font-size: 5vw;
     white-space: nowrap;
   }
 
