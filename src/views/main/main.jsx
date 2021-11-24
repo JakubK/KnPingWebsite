@@ -68,8 +68,6 @@ class Main extends Component {
     let allLettersLength = 0;
     for (let i = 0; i < this.state.words.length; i++) allLettersLength += this.state.words[i].length;
     this.setState({allLettersLength: allLettersLength});
-    console.log(allLettersLength)
-
     const textInterval = setInterval(() => {
       this.setState({letterIterator: this.state.letterIterator + 1});
 
