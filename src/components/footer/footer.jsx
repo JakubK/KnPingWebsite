@@ -6,7 +6,7 @@ const Footer = props => {
 
   return (isVisible ?
       <footer className="footer">
-        <span className="footer__caption">web powered by ...</span>
+        <span className="footer__caption">web powered by mikr.us</span>
         <span className="footer__caption">designed by kocurrok</span>
       </footer>
       : "")
