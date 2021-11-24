@@ -10,6 +10,10 @@ const Navbar = props => {
   const path = props.path();
   const isLogoVisible = (path !== "/");
 
+  const getSubdomain = (name) => {
+    return `subdomain.${window.location.host}`;
+  }
+
   return (
     <nav className={"navbar " + (isToggled ? 'navbar--active' : '')}>
       <div className={"navbar__wrapper " + (isLogoVisible ? '' : 'navbar__wrapper--moved')}>
@@ -65,7 +69,7 @@ const Navbar = props => {
           <Link to="/gallery">galeria</Link>
         </li>
         <li onClick={() => toggle()}>
-          <Link to="/ctf">ctf</Link>
+          <a href={getSubdomain('ctf')}>ctf</a>
         </li>
         <li onClick={() => toggle()}>
           <Link to="/contact">kontakt</Link>

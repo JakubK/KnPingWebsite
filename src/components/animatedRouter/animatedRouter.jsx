@@ -62,8 +62,8 @@ const AnimatedRouter = props => {
     return (
         <Wrapper>
             {
-                pages.map(page =>
-                    <ViewContainer animation="slide" position={(pages.indexOf(page) - currentPageIndex)}>
+                pages.map((page,index) =>
+                    <ViewContainer key={index} animation="slide" position={(pages.indexOf(page) - currentPageIndex)}>
                         {page}
                     </ViewContainer>
                 )
