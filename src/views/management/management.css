@@ -76,17 +76,13 @@
     }
 }
 
-@media (max-width: 1024px) {
+@media (max-width: 1140px) {
     .management h1 {
         font-size: 64px;
     }
 }
 
-@media (max-width: 768px) {
-    .management h1 {
-        font-size: 30px;
-    }
-
+@media (max-width: 960px) {
     .management__section-left {
         width: 100%;
     }
@@ -94,5 +90,11 @@
     .management__section-right {
         width: 100%;
         padding: 20px 0;
+    }
+}
+
+@media (max-width: 768px) {
+    .management h1 {
+        font-size: 30px;
     }
 }
