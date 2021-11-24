@@ -104,17 +104,6 @@ class Main extends Component {
     return this.state.words[i].substring(0, this.state.letterIterator - (counter - this.state.words[i].length));
   }
 
-  getLetterIndex() {
-    // returns the letter's index in its word
-    let i;
-    let counter = 0;
-    for (i = 0; i < this.state.words.length; i++) {
-      counter += this.state.words[i].length;
-      if (counter > this.state.letterIterator) break;
-    }
-    return this.state.letterIterator - (counter - this.state.words[i].length);
-  }
-
   render() {
     return(
         <Container>
