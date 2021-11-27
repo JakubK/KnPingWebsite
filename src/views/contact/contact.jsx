@@ -15,12 +15,11 @@ const Contact = () => {
       </div>
 
       <div className="contact__forms">
-        <h3>mail: ping@ping.com</h3>
-        <h3>FB: Ping PG</h3>
-        <h3>tel: 123 345 789</h3>
+        <h3>mail: ping@eti.pg.edu.pl</h3>
+        <h3>facebook: fb.com/pingetipg</h3>
       </div>
     </div>
-    <div className="contact__separator"></div>
+    <div className="contact__separator"/>
     <div className="contact__where">
       <h3>Tu jesteśmy!</h3>
       <img alt="map" src={map}/>

@@ -11,7 +11,7 @@ const Navbar = props => {
   const isLogoVisible = (path !== "/");
 
   const getSubdomain = (name) => {
-    return `subdomain.${window.location.host}`;
+    return `${name}.${window.location.host}`;
   }
 
   return (

@@ -48,7 +48,7 @@ const Logo = styled.div`
   left: 50%;
   transform: translate(-50%, -50%);
   width: 90%;
-  max-width: 800px;
+  max-width: 600px;
   transition: opacity 2.95s;
   opacity: 0;
   ${props => props.isVisible ? "opacity: 1;" : `opacity: 0;`};

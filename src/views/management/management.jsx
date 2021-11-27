@@ -1,5 +1,6 @@
 import "./management.css"
 import photo1 from "../../assets/photo1.png";
+import photo2 from "../../assets/photo2.png";
 import symbol1 from "../../assets/symbol1.png";
 
 const Management = () => {
@@ -13,26 +14,34 @@ const Management = () => {
         <div className="management__symbol-container">
           <img alt="symbol1" src={symbol1} height="58" />
         </div>
-        Koło naukowe
+        Koło naukowe PING
         Politechniki Gdańskiej
-        to zespół, który tworzą ludzie pasjonujący się cyber-bezpieczeństwem. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque congue erat interdum, sollicitudin massa at, pulvinar lectus. Phasellus tincidunt feugiat vehicula. Sed pulvinar in enim ut elementum.
+        to zespół, który tworzą ludzie pasjonujący się cyberbezpieczeństwem.
+        Pasję dzielimy nie tylko z wydziałem ETI, ale ze wszystkimi hobbystami i profesjonalistami
+        związanymi z cyberbezpieczeństwem!
+        Zarząd koła stanowią:
+        <p>⚫ Aleksander Chotecki</p>
+        <p>⚫ Krzysztof Domagalski</p>
+        <p>⚫ Tomasz Dąbrowski</p>
+        By dołączyć do koła wystarczy, że napiszesz do nas na <a href="https://www.facebook.com/pingetipg" target="_blank">Fanpage'u</a>.
+        Zajęcia prowadzimy w każdy czwartek w formie otwartego spotkania, także zapraszamy!
       </div>
     </div>
     <div className="clearfix" />
     <div className="management__section">
       <div className="management__section-left">
         <h1>Nasza historia</h1>
-        <img alt="photo1" src={photo1}/>
+        <img alt="photo2" src={photo2}/>
       </div>
       <div className="management__section-right">
         <div className="management__symbol-container">
           <img alt="symbol1" src={symbol1} height="58" />
         </div>
-        Quisque nec magna
-        ipsum. Mauris libero
-        lorem, fermentum nec consectetur vitae, pharetra eget ipsum. Nunc quis dui maximus nisl sollicitudin aliquet nec tincidunt massa. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Sed a iaculis purus, ut dapibus leo. pellentesque enim consequat vitae. Morbi pulvinar feugiat lorem, dictum eleifend velit auctor congue. Aliquam erat volutpat. Aliquam justo massa, pulvinar et lacus feugiat, malesuada commodo lorem. Aenean quis erat sed metus facilisis placerat nec at ipsum. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae;
-
-
+        Nasze koło naukowe działa odnowione od <b>lutego 2020 roku</b>. Od początku dbamy o profesjonalizm i rzetelność.
+        Spotkania prowadzimy w bardzo zróżnicowanym stopniu merytorycznym, więc nieważne czy dopiero zaczynasz przygodę
+        z cyberbezpieczeństwem, czy też znasz się już na rzeczy - na pewno czegoś nowego się nauczysz i nie pożałujesz.
+        Spotkania nagrywamy, by były dostępne dla nowych członków koła i dla każdego, kto chciałby powtórzyć sobie jakiś
+        temat.
       </div>
     </div>
     <div className="clearfix" />
