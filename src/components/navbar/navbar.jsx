@@ -69,7 +69,7 @@ const Navbar = props => {
           <Link to="/gallery">galeria</Link>
         </li>
         <li onClick={() => toggle()}>
-          <a href={getSubdomain('ctf')} target="_blank">ctf</a>
+          <a href="https://ctf.knping.pl" target="_blank">ctf</a>
         </li>
         <li onClick={() => toggle()}>
           <Link to="/contact">kontakt</Link>
