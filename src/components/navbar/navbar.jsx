@@ -63,7 +63,7 @@ const Navbar = props => {
           <Link to="/">strona główna</Link>
         </li>
         <li onClick={() => toggle()}>
-          <Link to="/management">o nas</Link>
+          <Link to="/aboutus">o nas</Link>
         </li>
         <li onClick={() => toggle()}>
           <Link to="/gallery">galeria</Link>

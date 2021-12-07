@@ -3,12 +3,18 @@ import GalleryImage from '../../components/galleryImage/galleryImage';
 import {useEffect, useState} from "react";
 const Gallery = () => {
   const [state, setState] = useState([])
-    fetch("/api/v1/photos.php").then(
-        res => res.json()
-            .then(data => {
+    useEffect(() => {
+        const fetchData = async () => {
+            try {
+                const result = await fetch("/api/v1/photos.php");
+                const data = await result.json();
                 setState(data)
-            })
-    ).catch(e => console.log(e))
+            } catch (error) {
+                console.error(error);
+            }
+        }
+        fetchData();
+    }, [])
   return (
         <div className="gallery">
           <div className="gallery__info">
