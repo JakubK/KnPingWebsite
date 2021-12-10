@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 import Main from "../../views/main/main";
 import Gallery from "../../views/gallery/gallery";
-import Aboutus from "../../views/aboutus/aboutus";
+import About from "../../views/about/about";
 import Contact from "../../views/contact/contact";
 
 const Wrapper = styled.div`
@@ -54,8 +54,8 @@ const ViewContainer = styled.div`
 `;
 
 const AnimatedRouter = props => {
-    const pages = [<Main />, <Aboutus />, <Gallery />, <Contact />];
-    const paths = ["/", "/aboutus", "/gallery", "/contact"];
+    const pages = [<Main />, <About />, <Gallery />, <Contact />];
+    const paths = ["/", "/about-us", "/gallery", "/contact"];
     const path = props.path();
     const currentPageIndex = paths.indexOf(path);
 
