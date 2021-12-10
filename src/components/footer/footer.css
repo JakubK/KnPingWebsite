@@ -21,26 +21,3 @@
   height: 2px;
   background:#0CC6FF;
 }
-
-.footer .footer__link {
-  text-decoration: none;
-  color: #0CC6FF;
-  position: relative;
-}
-
-.footer .footer__link:after {
-  position: absolute;
-  display: block;
-  left: 0;
-  bottom: 0;
-  width: 0;
-  height: 1px;
-  content: '';
-  background:#0CC6FF;
-
-  transition: all 0.5s;
-}
-
-.footer .footer__link:hover:after {
-  width: 100%;
-}

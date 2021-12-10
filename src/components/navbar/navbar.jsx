@@ -10,10 +10,6 @@ const Navbar = props => {
   const path = props.path();
   const isLogoVisible = (path !== "/");
 
-  const getSubdomain = (name) => {
-    return `${name}.${window.location.host}`;
-  }
-
   return (
     <nav className={"navbar " + (isToggled ? 'navbar--active' : '')}>
       <div className={"navbar__wrapper " + (isLogoVisible ? '' : 'navbar__wrapper--moved')}>
@@ -63,13 +59,13 @@ const Navbar = props => {
           <Link to="/">strona główna</Link>
         </li>
         <li onClick={() => toggle()}>
-          <Link to="/aboutus">o nas</Link>
+          <Link to="/about-us">o nas</Link>
         </li>
         <li onClick={() => toggle()}>
           <Link to="/gallery">galeria</Link>
         </li>
         <li onClick={() => toggle()}>
-          <a href="https://ctf.knping.pl" target="_blank">ctf</a>
+          <a rel="noreferrer" href="https://ctf.knping.pl" target="_blank">ctf</a>
         </li>
         <li onClick={() => toggle()}>
           <Link to="/contact">kontakt</Link>
