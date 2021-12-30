@@ -19,7 +19,7 @@ const About = () => {
         <p>⚫ Aleksander Chotecki</p>
         <p>⚫ Krzysztof Domagalski</p>
         <p>⚫ Tomasz Dąbrowski</p>
-        Nie musisz być studentem PG, by dołączyć do koła. Wystarczy, że napiszesz do nas na <a className="link" href="https://www.facebook.com/pingetipg" target="_blank">Fanpage'u</a>.
+        Nie musisz być studentem PG, by dołączyć do koła. Wystarczy, że napiszesz do nas na <a className="link" href="https://www.facebook.com/pingetipg" target="_blank" rel="noreferrer">Fanpage'u</a>.
         Zajęcia prowadzimy w każdy czwartek o 19:00 w formie otwartego spotkania. Zapraszamy!
       </div>
     </div>
@@ -33,7 +33,7 @@ const About = () => {
         <div className="management__symbol-container">
           <img alt="symbol1" src={symbol1} height="58" />
         </div>
-        Nasze koło naukowe działa w odnowionej formie od lutego 2020 roku.  Organizowane spotkania dotyczą zarówno tematów technicznych jak i nietechnicznych, jednak zawsze są związane z dziedziną cyberbezpieczeństwa. Po dołączeniu otrzymasz od nas przygotowane materiały oraz dostęp do nagrań ze wszystkich spotkań, które odbyły się do tej pory. Nieważne czy dopiero zaczynasz przygodę  z cyberbezpieczeństwem, czy też znasz się na rzeczy to z pewnością rozwiniesz swoje zdolności działając w naszym kole.  Wierzymy, że aktywność w ramach społeczności to najlepszy sposób na udoskonalenie własnych umiejętności. Dołącz do nas już <a className="link" href="https://www.facebook.com/pingetipg" target="_blank">dziś</a>!
+        Nasze koło naukowe działa w odnowionej formie od lutego 2020 roku.  Organizowane spotkania dotyczą zarówno tematów technicznych jak i nietechnicznych, jednak zawsze są związane z dziedziną cyberbezpieczeństwa. Po dołączeniu otrzymasz od nas przygotowane materiały oraz dostęp do nagrań ze wszystkich spotkań, które odbyły się do tej pory. Nieważne czy dopiero zaczynasz przygodę  z cyberbezpieczeństwem, czy też znasz się na rzeczy to z pewnością rozwiniesz swoje zdolności działając w naszym kole.  Wierzymy, że aktywność w ramach społeczności to najlepszy sposób na udoskonalenie własnych umiejętności. Dołącz do nas już <a className="link" rel="noreferrer" href="https://www.facebook.com/pingetipg" target="_blank">dziś</a>!
       </div>
     </div>
     <div className="clearfix" />
